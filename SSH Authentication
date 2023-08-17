@@ -19,6 +19,6 @@ Host github.com
 	IdentityFile ~/DevOps-Practice-Key.pem
 	
 
-~ -----> means home folder (/c/users/usrname) 
+~ -----> means home folder (/c/users/username) 
 
 ``````
