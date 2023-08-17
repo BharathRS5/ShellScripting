@@ -1,0 +1,24 @@
+#### SSH Authentication for Git #######
+
+1. Import Public key into the github server(github account)
+2. Create a file called config(without any extension) at .ssh folder in user directory of Windows.
+
+Follow the below syntax
+
+``````
+#This validation is for DevOps-Practice-Key.
+Host github.com
+	HostName github.com
+	User git
+	IdentityFile ~/DevOps-Practice-Key.pem
+	
+#This is for another github account authentication.
+Host github.com
+	HostName github.com-anotheraccount
+	User git
+	IdentityFile ~/DevOps-Practice-Key.pem
+	
+
+~ -----> means home folder (/c/users/usrname) 
+
+``````
