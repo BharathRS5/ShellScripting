@@ -16,11 +16,12 @@ then
 fi
 
 #It is our responsibility again to check installation is success or not.
-yum install mysql -y
+yum install mysqqql -y
 
 if [ $? -ne 0 ]
 then
     echo "Installation of mysql is failure"
+    exit
 else
     echo "Installation of mysql is success"
 fi
