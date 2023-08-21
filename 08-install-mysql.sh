@@ -10,7 +10,7 @@ USERID=$(id -u)
 if [ $USERID -ne 0 ]
 then 
     echo "ERROR:: Please run this script with root access"
-    exit 1
+    
 #else
     #echo "INFO:: You are root user"
 fi
@@ -24,4 +24,13 @@ then
     exit 1
 else
     echo "Installation of mysql is success"
+fi
+
+yum -y install postfix cyrus-sasl-plain mailx
+if [ $? -ne 0 ]
+then
+    echo "Installation of postfix is failure"
+    exit 1
+else
+    echo "Installation of postfix is success"
 fi
