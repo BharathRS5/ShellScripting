@@ -2,11 +2,12 @@
 
 #Our program goal is to install mysql through shell-script
 DATE=$(date +%D:%T)
-LOGFILE=/tmp/$0
-USERID=$(id -u)
+SCRIPT_NAME=$0
+LOGFILE=/tmp/$SCRIPT_NAME-$DATE.log
+
 #This function should validate the previous command and inform user it is success or failure.
 VALIDATE(){
-#$1--->It will receive the argument1(input)     $2--> It will receive argument two.
+#$1--->It will receive the argument1(input)     $2--> It will receive second argument.
     if [ $1 -ne 0 ]
     then
         echo "Installation of $2 is failure"
@@ -15,6 +16,8 @@ VALIDATE(){
         echo "Installation of $2 is success"
     fi
 }
+
+USERID=$(id -u)
 
 if [ $USERID -ne 0 ]
 then 
@@ -25,10 +28,10 @@ then
 fi
 
 #It is our responsibility again to check installation is success or not.
-yum install mysql -y
+yum install mysql -y &>>$LOGFILE
 
 VALIDATE $? "mysql"
 
-yum -y install postfix 
+yum -y install postfix &>>$LOGFILE 
 
-VALIDATE $? "postfix"
+VALIDATE $? "postfix" 
