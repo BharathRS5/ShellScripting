@@ -1,6 +1,8 @@
 #!/bin/bash
 
 #Our program goal is to install mysql through shell-script
+DATE=$(date +%D:%T)
+LOGFILE=/tmp/$0
 USERID=$(id -u)
 #This function should validate the previous command and inform user it is success or failure.
 VALIDATE(){
