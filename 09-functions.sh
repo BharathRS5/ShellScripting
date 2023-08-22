@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #Our program goal is to install mysql through shell-script
-DATE=$(date +%D)
+DATE=$(date +%F)
 SCRIPT_NAME=$0
 LOGFILE=/tmp/$SCRIPT_NAME-$DATE.log
 
