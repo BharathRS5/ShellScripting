@@ -4,16 +4,19 @@
 DATE=$(date +%F)
 SCRIPT_NAME=$0
 LOGFILE=/tmp/$SCRIPT_NAME-$DATE.log
+R="\e[31m"
+G="\e[32m"
+N="\e[0m"
 
 #This function should validate the previous command and inform user it is success or failure.
 VALIDATE(){
 #$1--->It will receive the argument1(input)     $2--> It will receive second argument.
     if [ $1 -ne 0 ]
     then
-        echo "Installation of $2 is failure"
+        echo "Installation of $2 is $R failure $N"
         exit 1
     else
-        echo "Installation of $2 is success"
+        echo "Installation of $2 is $G success $N"
     fi
 }
 
