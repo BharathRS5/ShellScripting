@@ -2,7 +2,7 @@
 
 #Our program goal is to install mysql through shell-script
 #1. Check root user or not
-#2. If not root user exit the program and iform user to run with sudo access
+#2. If not root user exit the program and inform user to run with sudo access
 #3. If root user install mysql
 
 USERID=$(id -u)
@@ -26,7 +26,7 @@ else
     echo "Installation of mysql is success"
 fi
 
-yum -y install postfix cyrus-sasl-plain mailx
+yum -y install postfix 
 if [ $? -ne 0 ]
 then
     echo "Installation of postfix is failure"
