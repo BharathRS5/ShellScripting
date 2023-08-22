@@ -13,10 +13,10 @@ VALIDATE(){
 #$1--->It will receive the argument1(input)     $2--> It will receive second argument.
     if [ $1 -ne 0 ]
     then
-        echo "Installation of $2 is $R failure $N"
+        echo -e "Installation of $2 is $R failure $N"
         exit 1
     else
-        echo "Installation of $2 is $G success $N"
+        echo -e "Installation of $2 is $G success $N"
     fi
 }
 
