@@ -38,3 +38,4 @@ do
     else
         echo -e "$P $i already installed $N"
     fi
+done
