@@ -8,7 +8,7 @@ LOGFILE=$LOGSDIR/$0-$DATE.log
 USERID=$(id -u)
 R="\e[31m"
 N="\e[0m"
-P="\e[35m"
+P="\e[35m" #Purple
 G="\e[32m"
 
 VALIDATE(){
