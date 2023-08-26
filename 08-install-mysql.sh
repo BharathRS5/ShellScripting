@@ -15,8 +15,8 @@ then
     #echo "INFO:: You are root user"
 fi
 
-#It is our responsibility again to check installation is success or not.
 yum install mysql -y
+#It is our responsibility again to check installation is success or not.
 
 if [ $? -ne 0 ]
 then
