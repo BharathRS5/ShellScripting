@@ -7,7 +7,7 @@ SCRIPT_NAME=$0
 LOGFILE=$LOGSDIR/$0-$DATE.log
 USERID=$(id -u)
 R="\e[31m"
-N="\e[0m" #No color
+N="\e[0m" #No/Normal color
 P="\e[35m" #Purple
 G="\e[32m"
 
