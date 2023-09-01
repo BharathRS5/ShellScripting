@@ -10,3 +10,4 @@ LOGFILE=$LOGSDIR/$0-$DATE.log
 FILES_TO_DELETE=$(find $APP_LOG_DIR -name "*.log" -type f -mtime +14)
 
 echo "$FILES_TO_DELETE"
+
