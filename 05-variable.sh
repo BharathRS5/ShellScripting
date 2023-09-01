@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "Please enter your username"
-read USRERNAME #this the variable the value will be assigned by prompt to this variable
+read USRERNAME #this is the variable the value will be assigned by prompt to this variable
 echo "Username entered is: $USERNAME"
 
 echo "Please enter your password"
